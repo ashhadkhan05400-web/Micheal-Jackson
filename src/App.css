@@ -1,0 +1,229 @@
+:root {
+  --bg: #000000;
+  --bg-card: #111111;
+  --gold: #f5c518;
+  --gold-dim: #d4af37;
+  --text: #ffffff;
+  --text-muted: #999999;
+  --border: #222222;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+
+#nav {
+  border: 1.5px solid #2B2C32;
+  border-radius: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: fit-content;
+  height: 50px;
+  color: white;
+  background-color: #383039;
+  margin: 24px auto 0;
+  padding: 0 20px;
+}
+
+#home {
+  cursor: pointer;
+  color: rgb(255, 212, 59);
+  font-size: 24px;
+}
+
+#home2 {
+  cursor: pointer;
+  font-size: 21px;
+}
+
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px 40px;
+  background: #000;
+}
+
+.hero-image-wrap {
+  position: relative;
+  width: 90%;
+  max-width: 780px;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.7);
+  background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
+}
+
+.hero-image-wrap img,
+#banner {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  aspect-ratio: 16/9;
+  border-radius: 18px;
+}
+
+.hero-image-wrap::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, transparent 50%);
+  pointer-events: none;
+  border-radius: 18px;
+}
+
+
+.hero-text {
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  text-align: center;         
+}
+
+/* Eyebrow label — small caps, wide tracking, sits above headlines */
+.eyebrow {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+  margin-bottom: 12px;
+}
+
+.hero-text h1,
+#abt {
+  font-family: 'Playfair Display', 'Space Grotesk', serif;
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  font-weight: 700;
+  font-style: italic;
+  line-height: 1.1;
+  margin-bottom: 4px;
+  color: white;
+  letter-spacing: -0.01em;
+}
+
+.hero-text h1 .gold,
+#span {
+  color: var(--gold);
+}
+
+.hero-text p {
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  font-weight: 400;
+  color: #ddd;
+  letter-spacing: 0.01em;
+}
+
+.hero-text p .gold {
+  color: var(--gold);
+  font-weight: 600;
+}
+
+#legend {
+  text-align: center;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 600;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: -0.01em;
+  margin-top: 60px;
+}
+
+#goldline {
+  border: none;
+  height: 1px;
+  width: 40px;
+  background: var(--gold);
+  margin: 16px auto 36px;
+  opacity: 0.85;
+}
+
+#details {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  font-weight: 400;
+  line-height: 1.85;
+  letter-spacing: 0.01em;
+  max-width: 650px;
+  margin: 0 auto 60px;
+  padding: 0 20px;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+}
+
+#a{
+  text-decoration: none;
+  color: white;
+  margin-top: 6px;
+}
+#music{
+  margin-top: 100px;
+}
+
+.songs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.song-card {
+  background: #1a1a1a;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
+}
+
+.song-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(255, 215, 0, 0.15);
+}
+
+.song-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+}
+
+.song-info {
+  padding: 0.9rem 1rem 1.1rem;
+}
+
+.song-info h3 {
+  margin: 0 0 0.25rem;
+  font-size: 0.95rem;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.song-info p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #aaa;
+}
